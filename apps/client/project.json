@@ -63,6 +63,17 @@
       "options": {
         "lintFilePatterns": ["apps/client/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "build-image": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "docker build -f apps/client/Dockerfile  -t ruslanguns/client ."
+          }
+        ],
+        "parallel": false
+      }
     }
   },
   "tags": []
