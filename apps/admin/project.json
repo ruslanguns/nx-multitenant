@@ -63,6 +63,17 @@
       "options": {
         "lintFilePatterns": ["apps/admin/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "build-image": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "docker build -f apps/admin/Dockerfile  -t ruslanguns/admin ."
+          }
+        ],
+        "parallel": false
+      }
     }
   },
   "tags": []
