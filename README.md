@@ -1,6 +1,8 @@
 # Nx Multitenant Proof of Concept
 
-This project will create a proof of concept of an automated Multi-Tenant Application that is highly available and provides a secure, reliable, and high-performance platform. Leveraging the power of Nx, Next, CI&CD, Docker, and Kubernetes will enable us to quickly scale the application and provide an optimal user experience. This application will be robust and reliable, allowing us to quickly deploy and update our application without worrying about the underlying infrastructure.
+This project will create a proof of concept of an automated Multi-Tenant Application that is highly available and provides a secure, reliable, and high-performance platform. Leveraging the power of Nx, Next, CI&CD, Docker, and Kubernetes will enable us to quickly scale the application and provide an optimal user experience.
+
+This monorepo includes two applications, an admin and a client application. The admin application will have a simple CRUD to add clients. When there is an activity with one of the clients from the admin dashboard, it will trigger a automated deployment pipeline with the respective values of each client, which will deploy the client application in a separated application with its own resources (ie. database, etc).
 
 ## Development server
 
