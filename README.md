@@ -8,7 +8,7 @@ This monorepo includes two applications, an admin and a client application. The 
 
 Run `nx serve <admin | client>` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-## TODOs
+## Roadmap
 
 - [x] Add admin app to the monorepo
 - [x] Add client app to the monorepo
