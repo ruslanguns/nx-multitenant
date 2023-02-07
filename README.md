@@ -17,10 +17,7 @@ Run `nx serve <admin | client>` for a dev server. Navigate to http://localhost:4
 - [ ] Add push-image script to push docker images to a registry
 - [ ] Add helm chart for deployment
 - [ ] Add deploy script to deploy the helm chart
-- [ ] Add CI/CD pipeline to test, build, push and deploy the application (standalone)<sup>[1](#1)</sup>
-
-### References:
-
-##### 1
-
-The CI/CD pipeline should be able to deploy the application in a standalone environment, where the admin and client apps are deployed separately. Since there will be more requirements to make a multitenant app.
+- [ ] Add CI/CD pipeline to test, build and release.
+- [ ] Add CI/CD pipeline to manual deploy the admin app
+- [ ] Add CI/CD pipeline to manual deploy the client app (this may be replaced by a pipeline trigger)
+- [ ] Configure a pipeline trigger to deploy client via API
