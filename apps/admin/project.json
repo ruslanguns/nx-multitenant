@@ -69,7 +69,29 @@
       "options": {
         "commands": [
           {
-            "command": "docker build -f apps/admin/Dockerfile  -t ruslanguns/admin ."
+            "command": "docker build -f apps/admin/Dockerfile  -t ruslanguns/admin:latest ."
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "push-image": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "docker push ruslanguns/admin:latest"
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "kubectl apply -f apps/admin/.k8s"
           }
         ],
         "parallel": false

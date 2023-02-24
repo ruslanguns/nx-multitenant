@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+  namespace: nx-multitenant
+  labels:
+    app: admin
+spec:
+  selector:
+    matchLabels:
+      app: admin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      containers:
+      - name: admin
+        image: ruslanguns/admin:latest
+        ports:
+        - containerPort: 80
+        # resources:
+        #   limits:
+        #     cpu: 168Mi
+        #     memory: 168Mi
+        #   requests:
+        #     cpu: 100Mi
+        #     memory: 100Mi

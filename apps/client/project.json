@@ -74,6 +74,28 @@
         ],
         "parallel": false
       }
+    },
+    "push-image": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "docker push ruslanguns/client:latest"
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "kubectl apply -f apps/client/.k8s"
+          }
+        ],
+        "parallel": false
+      }
     }
   },
   "tags": []
